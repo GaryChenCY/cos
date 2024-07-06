@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member system</title>
+</head>
+<body>
+    <h2>註冊</h2>
+    <div>Welcome To Our Webpage</div>
+    <form action="/signup" method="POST">
+        name<input type="text" name="nickname"><br>
+        email<input type="text" name="email"><br>
+        password<input type="password" name="password"><br>
+        phonenumber<input type="text" name="phonenumber" oninput="toggleVerificationSection()"><button type="button" onclick="sendVerificationCode()">發送驗證碼</button><br>
+        驗證碼<input type="text" name="text"><br>
+        
+        <div id="verification-section" style="display:none;">
+            <label for="verification">Verification Code</label>
+            <input type="text" id="verification" name="verification"><br>
+        </div>
+        <button>signup</button>
+    </form>
+</body>
+</html>
